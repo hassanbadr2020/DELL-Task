@@ -15,15 +15,15 @@ public class ApiRequests {
 
 
     public Response createPost(JSONObject body) {
-        return apiRequestBuilder.performRequest(dataManager.getApiUri(), endpoints.getPosts(), "POST", body, null, null, null);
+        return apiRequestBuilder.performRequest(dataManager.getApiUri(), endpoints.getCategories(), "POST", body, null, null, null);
     }
 
-    public Response getAllCreatedPosts() {
-        return apiRequestBuilder.performRequest(dataManager.getApiUri(), endpoints.getPosts(), "GET", null, null, null, null);
+    public Response getAllCategories() {
+        return apiRequestBuilder.performRequest(dataManager.getApiUri(), endpoints.getCategories(), "GET", null, null, null, null);
     }
 
     public Response getOnePost(String postId) {
-        return apiRequestBuilder.performRequest(dataManager.getApiUri(), endpoints.getPosts() + "/" + postId, "GET", null, null, null, null);
+        return apiRequestBuilder.performRequest(dataManager.getApiUri(), endpoints.getCategories() + "/" + postId, "GET", null, null, null, null);
     }
 
 }
