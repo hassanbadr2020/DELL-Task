@@ -1,6 +1,7 @@
-@GetAllPosts
+@GetAllCategories
 Feature: User Get All Categories
 
+  @HappyScenario
   Scenario: User Try to get All Categories
     Given User send a get request to list all Categories
     Then status code is "200"
