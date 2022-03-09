@@ -4,7 +4,7 @@ public class Endpoints {
     /**
      * Static variables to contain the end points.
      */
-    private static final String POSTS = "/posts";
+    private static final String CATEGORIES = "/categories";
 
 
 
@@ -12,7 +12,7 @@ public class Endpoints {
      * All Getters for the above properties.
      */
 
-    public String getPosts() {
-        return POSTS;
+    public String getCategories() {
+        return CATEGORIES;
     }
 }
