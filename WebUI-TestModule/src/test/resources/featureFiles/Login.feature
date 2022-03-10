@@ -6,7 +6,7 @@ Feature: User Login
     Given  A user in the login page
     When   user enter name and password in fields "<email>" "<password>"
     And    click on the login button
-    Then   I'm in the home page
+    Then   user in the home page
     Examples:
       | email         | password     |
       | standard_user | secret_sauce |
@@ -26,5 +26,5 @@ Feature: User Login
       #Valid Email and missing password
       | standard_user |              | Epic sadface: Password is required                                        |
       #Missed Email and Valid password
-      |               | secret_sauce | [Epic sadface: Username is required                                       |
+      |               | secret_sauce | Epic sadface: Username is required                                       |
 

@@ -1,8 +1,10 @@
 package base;
 
 import Environments.EnviromnetHandler.DataManager;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +16,9 @@ public class Base {
     public void startBrowser() {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
         driver = new ChromeDriver();
+        Dimension initial_size = driver.manage().window().getSize();
         driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1024, 768));
         driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
         driver.navigate().to(dataManager.getUIUrl());
 

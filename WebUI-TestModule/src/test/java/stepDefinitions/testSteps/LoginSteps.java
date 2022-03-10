@@ -37,6 +37,6 @@ public class LoginSteps extends Base {
 
     @Then("system displays an error message says {string}")
     public void systemDisplaysAnErrorMessageSays( String errorMessage) {
-        Assert.assertEquals("errorMessage", signInPage.getActualMessage());
+        Assert.assertEquals(errorMessage, signInPage.getActualMessage());
     }
 }

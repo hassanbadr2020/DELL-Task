@@ -1,5 +1,6 @@
 @CreateCategory
 Feature: User wants to create a new Category
+
   @HappyScenario
   Scenario Outline: User trays to create a new Category with Valid data
     Given user has the name and id of a new Category
