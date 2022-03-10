@@ -44,7 +44,6 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -54,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 10, 2022 05:28:08 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 10, 2022 08:28:34 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -70,7 +69,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -129,10 +127,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='60%'><span class='strong'>3</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='40%'>2</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -143,10 +141,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='69.231%'><span class='strong'>9</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>13</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='30.769%'>4</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -159,10 +157,10 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='92.593%'><span class='strong'>50</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>54</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='7.407%'>4</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -185,7 +183,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>User wants to create a new Category</span>
-						<span class='test-time'>Mar 10, 2022 05:28:12 PM</span>
+						<span class='test-time'>Mar 10, 2022 08:28:37 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -199,7 +197,7 @@
 	<div class='category-list'>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 0m 30s+266ms</span>
+	<span class='duration right label'>0h 0m 18s+647ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User trays to create a new Category with Valid data</div>
 		<table class='runtime-table table-striped table'><tr><td>name</td><td>id</td></tr><tr><td>Fake Name 1</td><td>Fake Id 1</td></tr><tr><td>Fake Name 2</td><td>Fake Id 2</td></tr></table>
@@ -262,7 +260,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='17'>
 					<div class='test-heading'>
 						<span class='test-name'>User wants to delete a category with an id of category</span>
-						<span class='test-time'>Mar 10, 2022 05:28:42 PM</span>
+						<span class='test-time'>Mar 10, 2022 08:28:56 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -276,7 +274,7 @@
 	<div class='category-list'>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 0m 1s+803ms</span>
+	<span class='duration right label'>0h 0m 1s+609ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User trays to delete a category with valid id</div>
 		<table class='runtime-table table-striped table'><tr><td>id</td></tr><tr><td>Fake Id 1</td></tr><tr><td>Fake Id 2</td></tr></table>
@@ -328,11 +326,11 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='31'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='31'>
 					<div class='test-heading'>
 						<span class='test-name'>User wants to get a Category with Id</span>
-						<span class='test-time'>Mar 10, 2022 05:28:44 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Mar 10, 2022 08:28:57 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -341,18 +339,18 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='32' status='fail'>
+<div class='scenario outline node' test-id='32' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 0m 1s+122ms</span>
+	<span class='duration right label'>0h 0m 3s+67ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: User try to get a Category with the id of the Category</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User try to get a Category with the id of the Category</div>
 		<table class='runtime-table table-striped table'><tr><td>id</td><td>name</td></tr><tr><td>abcat0010000</td><td>Gift Ideas</td></tr><tr><td>abcat0020001</td><td>Learning Toys</td></tr><tr><td>abcat0020002</td><td>DVD Games</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='33' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User try to get a Category with the id of the Category</div>
+		<li test-id='33' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to get a Category with the id of the Category</div>
 			<ul class='gc steps'>
 				<li test-id='34' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepDefinitions.testSteps.GetACategory.<init>(GetACategory.java:17)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user send a request to get Category with valid "abcat0010000"</h6>
@@ -366,23 +364,14 @@
 					<h6 class="step-name" title="stepDefinitions.testSteps.GetACategory.<init>(GetACategory.java:20)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the name of the Category is "Gift Ideas"</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='37' class='gc and fail' status='fail'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/CategoryBody.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:9)
-</textarea>
+				<li test-id='37' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</h6>
+					<div class="node-step"></div>
 				</li>
 			</ul>
 		</li>
-		<li test-id='39' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User try to get a Category with the id of the Category</div>
+		<li test-id='39' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to get a Category with the id of the Category</div>
 			<ul class='gc steps'>
 				<li test-id='40' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepDefinitions.testSteps.GetACategory.<init>(GetACategory.java:17)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user send a request to get Category with valid "abcat0020001"</h6>
@@ -396,23 +385,14 @@
 					<h6 class="step-name" title="stepDefinitions.testSteps.GetACategory.<init>(GetACategory.java:20)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the name of the Category is "Learning Toys"</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='43' class='gc and fail' status='fail'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/CategoryBody.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:9)
-</textarea>
+				<li test-id='43' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</h6>
+					<div class="node-step"></div>
 				</li>
 			</ul>
 		</li>
-		<li test-id='45' class='node scenario fail' status='fail'>
-			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>User try to get a Category with the id of the Category</div>
+		<li test-id='45' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to get a Category with the id of the Category</div>
 			<ul class='gc steps'>
 				<li test-id='46' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepDefinitions.testSteps.GetACategory.<init>(GetACategory.java:17)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user send a request to get Category with valid "abcat0020002"</h6>
@@ -426,18 +406,9 @@
 					<h6 class="step-name" title="stepDefinitions.testSteps.GetACategory.<init>(GetACategory.java:20)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the name of the Category is "DVD Games"</h6>
 					<div class="node-step"></div>
 				</li>
-				<li test-id='49' class='gc and fail' status='fail'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</h6>
-					<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/CategoryBody.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:9)
-</textarea>
+				<li test-id='49' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</h6>
+					<div class="node-step"></div>
 				</li>
 			</ul>
 		</li>
@@ -447,7 +418,7 @@
 	<div class='category-list'>
 		<span class='category label'>@NegativeScenarios</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+617ms</span>
+	<span class='duration right label'>0h 0m 0s+550ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User try to get a post with the invalid id of the Category</div>
 		<table class='runtime-table table-striped table'><tr><td>id</td><td>record</td></tr><tr><td>0</td><td>No record found for id '0'</td></tr><tr><td>101</td><td>No record found for id '101'</td></tr><tr><td>jk</td><td>No record found for id 'jk'</td></tr></table>
@@ -508,11 +479,11 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='67'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='67'>
 					<div class='test-heading'>
 						<span class='test-name'>User Get All Categories</span>
-						<span class='test-time'>Mar 10, 2022 05:28:46 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Mar 10, 2022 08:29:01 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -521,14 +492,14 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='68' status='fail'>
+<div class='scenario node' test-id='68' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@GetAllCategories</span>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 0m 1s+772ms</span>
+	<span class='duration right label'>0h 0m 1s+526ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User Try to get All Categories</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User Try to get All Categories</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='69' class='node given pass' status='pass'>
@@ -539,18 +510,9 @@
 			<div class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:23)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then status code is "200"</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='71' class='node and fail' status='fail'>
-			<div class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>And response body matches "JsonSchemas/ListOfCategories.json" in Api contract</div>
-			<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/ListOfCategories.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetAllCategories.feature:8)
-</textarea>
+		<li test-id='71' class='node and pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.testSteps.GetAllCategories.<init>(GetAllCategories.java:26)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And response body matches "JsonSchemas/ListOfCategories.json" in Api contract</div>
+			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
@@ -559,7 +521,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='73'>
 					<div class='test-heading'>
 						<span class='test-name'>User Wants to update a category name or id or both of them with the category id</span>
-						<span class='test-time'>Mar 10, 2022 05:28:47 PM</span>
+						<span class='test-time'>Mar 10, 2022 08:29:02 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -573,7 +535,7 @@
 	<div class='category-list'>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 0m 2s+745ms</span>
+	<span class='duration right label'>0h 0m 12s+434ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User trays to update the category with valid data</div>
 		<table class='runtime-table table-striped table'><tr><td>nameCreate</td><td>id</td><td>name</td></tr><tr><td>Fake Name 3</td><td>Fake Id 3</td><td>Fake Name 4</td></tr><tr><td>Fake Name 4</td><td>Fake Id 4</td><td>Fake Name 5</td></tr></table>
@@ -703,17 +665,17 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:12 PM</td>
+										<td>Mar 10, 2022 08:28:37 PM</td>
 										<td class='linked' test-id='1'>User wants to create a new Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:12 PM</td>
+										<td>Mar 10, 2022 08:28:37 PM</td>
 										<td class='linked' test-id='3'>User trays to create a new Category with Valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:41 PM</td>
+										<td>Mar 10, 2022 08:28:54 PM</td>
 										<td class='linked' test-id='10'>User trays to create a new Category with Valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -726,14 +688,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@HappyScenario</span>
 						<span class='category-status right'>
-						<span class='label pass'>9</span>
-						<span class='label fail'>5</span>
+						<span class='label pass'>14</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 9</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 5</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 14</span>
+							
 							
 						</div>
 						<div class='category-tests'>
@@ -747,72 +708,72 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:12 PM</td>
+										<td>Mar 10, 2022 08:28:37 PM</td>
 										<td class='linked' test-id='2'>User trays to create a new Category with Valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:12 PM</td>
+										<td>Mar 10, 2022 08:28:37 PM</td>
 										<td class='linked' test-id='3'>User trays to create a new Category with Valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:41 PM</td>
+										<td>Mar 10, 2022 08:28:54 PM</td>
 										<td class='linked' test-id='10'>User trays to create a new Category with Valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:42 PM</td>
+										<td>Mar 10, 2022 08:28:56 PM</td>
 										<td class='linked' test-id='18'>User trays to delete a category with valid id</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:42 PM</td>
+										<td>Mar 10, 2022 08:28:56 PM</td>
 										<td class='linked' test-id='19'>User trays to delete a category with valid id</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:43 PM</td>
+										<td>Mar 10, 2022 08:28:56 PM</td>
 										<td class='linked' test-id='25'>User trays to delete a category with valid id</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:44 PM</td>
+										<td>Mar 10, 2022 08:28:57 PM</td>
 										<td class='linked' test-id='32'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:44 PM</td>
+										<td>Mar 10, 2022 08:28:57 PM</td>
 										<td class='linked' test-id='33'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='39'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='45'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:46 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='68'>User Try to get All Categories</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:47 PM</td>
+										<td>Mar 10, 2022 08:29:02 PM</td>
 										<td class='linked' test-id='74'>User trays to update the category with valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:47 PM</td>
+										<td>Mar 10, 2022 08:29:02 PM</td>
 										<td class='linked' test-id='75'>User trays to update the category with valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:49 PM</td>
+										<td>Mar 10, 2022 08:29:13 PM</td>
 										<td class='linked' test-id='83'>User trays to update the category with valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -845,17 +806,17 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:42 PM</td>
+										<td>Mar 10, 2022 08:28:56 PM</td>
 										<td class='linked' test-id='17'>User wants to delete a category with an id of category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:42 PM</td>
+										<td>Mar 10, 2022 08:28:56 PM</td>
 										<td class='linked' test-id='19'>User trays to delete a category with valid id</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:43 PM</td>
+										<td>Mar 10, 2022 08:28:56 PM</td>
 										<td class='linked' test-id='25'>User trays to delete a category with valid id</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -868,14 +829,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@GetACategory</span>
 						<span class='category-status right'>
-						<span class='label pass'>3</span>
-						<span class='label fail'>3</span>
+						<span class='label pass'>6</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 6</span>
+							
 							
 						</div>
 						<div class='category-tests'>
@@ -889,37 +849,37 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:44 PM</td>
+										<td>Mar 10, 2022 08:28:57 PM</td>
 										<td class='linked' test-id='31'>User wants to get a Category with Id</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:44 PM</td>
+										<td>Mar 10, 2022 08:28:57 PM</td>
 										<td class='linked' test-id='33'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='39'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='45'>User try to get a Category with the id of the Category</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='52'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='57'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='62'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -952,22 +912,22 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='51'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:00 PM</td>
 										<td class='linked' test-id='52'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='57'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='62'>User try to get a post with the invalid id of the Category</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -980,13 +940,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@GetAllCategories</span>
 						<span class='category-status right'>
-						<span class='label fail'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
-							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -1000,14 +960,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:46 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='67'>User Get All Categories</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:46 PM</td>
+										<td>Mar 10, 2022 08:29:01 PM</td>
 										<td class='linked' test-id='68'>User Try to get All Categories</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -1038,17 +998,17 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:28:47 PM</td>
+										<td>Mar 10, 2022 08:29:02 PM</td>
 										<td class='linked' test-id='73'>User Wants to update a category name or id or both of them with the category id</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:47 PM</td>
+										<td>Mar 10, 2022 08:29:02 PM</td>
 										<td class='linked' test-id='75'>User trays to update the category with valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:28:49 PM</td>
+										<td>Mar 10, 2022 08:29:13 PM</td>
 										<td class='linked' test-id='83'>User trays to update the category with valid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -1066,119 +1026,7 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.IllegalArgumentException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>4</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
-										<td class='linked' test-id='37'>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/CategoryBody.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:9)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
-										<td class='linked' test-id='43'>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/CategoryBody.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:9)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Mar 10, 2022 05:28:45 PM</td>
-										<td class='linked' test-id='49'>And response body matches "JsonSchemas/CategoryBody.json" in Api contract</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/CategoryBody.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:9)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Mar 10, 2022 05:28:47 PM</td>
-										<td class='linked' test-id='71'>And response body matches "JsonSchemas/ListOfCategories.json" in Api contract</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.IllegalArgumentException: Schema to use cannot be null
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:240)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.access$100(JsonSchemaValidator.java:75)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:251)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:161)
-	at com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-	at apitUtilities.ApiMethodHelper.validateSchema(ApiMethodHelper.java:37)
-	at stepDefinitions.testSteps.GetAllCategories.lambda$new$3(GetAllCategories.java:28)
-	at ✽.response body matches "JsonSchemas/ListOfCategories.json" in Api contract(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetAllCategories.feature:8)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -1204,19 +1052,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 10, 2022 05:28:08 PM</div>
+					<div class='panel-lead'>Mar 10, 2022 08:28:34 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 10, 2022 05:28:50 PM</div>
+			 		<div class='panel-lead'>Mar 10, 2022 08:29:15 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 41s+741ms</div>
+					<div class='panel-lead'>0h 0m 41s+302ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -1242,11 +1090,11 @@
 						</tr>
 						<tr>
 							<td>@HappyScenario</td>
-							<td>9</td>
-							<td>5</td>
+							<td>14</td>
+							<td>0</td>
 							<td>0</td>
 							<td>
-									64.286%
+									100%
 							</td>
 						</tr>
 						<tr>
@@ -1260,11 +1108,11 @@
 						</tr>
 						<tr>
 							<td>@GetACategory</td>
-							<td>3</td>
-							<td>3</td>
+							<td>6</td>
+							<td>0</td>
 							<td>0</td>
 							<td>
-									42.857%
+									85.714%
 							</td>
 						</tr>
 						<tr>
@@ -1278,11 +1126,11 @@
 						</tr>
 						<tr>
 							<td>@GetAllCategories</td>
-							<td>0</td>
 							<td>1</td>
 							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									50%
 							</td>
 						</tr>
 						<tr>
@@ -1306,38 +1154,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 5,
-				passParent: 3,
-				failParent: 2,
+				passParent: 5,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 2,
+				exceptionsParent: 0,
 				childCount: 13,
-				passChild: 9,
-				failChild: 4,
+				passChild: 13,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 4,
+				exceptionsChild: 0,
 				grandChildCount: 54,
-				passGrandChild: 50,
-				failGrandChild: 4,
+				passGrandChild: 54,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
 				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 4,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "User wants to create a new Category":30.266,"User wants to delete a category with an id of category":1.803,"User wants to get a Category with Id":1.766,"User Get All Categories":1.772,"User Wants to update a category name or id or both of them with the category id":2.745
+			        "User wants to create a new Category":18.647,"User wants to delete a category with an id of category":1.609,"User wants to get a Category with Id":3.631,"User Get All Categories":1.526,"User Wants to update a category name or id or both of them with the category id":12.434
 			};
 		</script>
 	

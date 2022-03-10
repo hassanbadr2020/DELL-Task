@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class InventoryPage extends BasePage {
 
@@ -37,11 +38,21 @@ public class InventoryPage extends BasePage {
     @FindBy(className = "shopping_cart_badge")
     WebElement numOfEItems;
 
+
+    @FindBy(tagName = "select")
+    WebElement selectOption;
+
+    Select select = new Select(selectOption);
+
+
     // actions need in home page
     public String getActualTitle() {
         System.out.println(getTextElement(HomeTitle));
         return getTextElement(HomeTitle);
     }
+
+    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/a[1]/div[1]")
+    WebElement firstElement;
 
     public void clickOnAddBackPackBtn() {
         clickButton(sauceLabsBackpackBtn);
@@ -75,4 +86,19 @@ public class InventoryPage extends BasePage {
         return getTextElement(numOfEItems);
     }
 
+    public void clickOnSortContainer(String sortType) {
+        if (sortType.equals("AZ")) {
+            select.selectByVisibleText("Name (A to Z)");
+        } else if (sortType.equals("ZA")) {
+            select.selectByVisibleText("Name (Z to A)");
+        } else if (sortType.equals("low To High")) {
+            select.selectByVisibleText("Price (low to high)");
+        } else{
+            select.selectByVisibleText("Price (high to low)");
+        }
+    }
+
+    public String getNameTheFirstItem() {
+        return getTextElement(firstElement);
+    }
 }
