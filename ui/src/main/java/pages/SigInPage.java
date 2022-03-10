@@ -36,5 +36,4 @@ public class SigInPage extends BasePage {
         return getTextElement(errorMessagelogin);
     }
 
-
 }
