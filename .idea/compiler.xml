@@ -6,10 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="API-TestModule" />
-        <module name="WebUI-TestModule" />
-        <module name="Common-Utilities" />
+        <module name="api" />
+        <module name="common" />
+        <module name="ui" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="uiiiii" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
