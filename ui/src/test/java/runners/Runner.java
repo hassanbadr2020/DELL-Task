@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:testOutput"},
         features = {"src/test/resources/featureFiles"},
         glue = {"stepDefinitions"},
-        tags = {"@login or @checkoutCart"}
+        tags = {"@login or @logout or @checkoutCart"}
 )
 
 public class Runner {

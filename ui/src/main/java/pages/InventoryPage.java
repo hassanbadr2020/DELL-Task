@@ -16,6 +16,9 @@ public class InventoryPage extends BasePage {
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     WebElement sauceLabsBackpackBtn;
 
+    @FindBy(id = "remove-sauce-labs-backpack")
+    WebElement removeSauceLabsBackpackBtn;
+
     @FindBy(id = "add-to-cart-sauce-labs-bike-light")
     WebElement sauceLabsBikeLightBtn;
 
@@ -25,6 +28,14 @@ public class InventoryPage extends BasePage {
     @FindBy(id = "shopping_cart_container")
     WebElement shopping_cart_container;
 
+    @FindBy(id = "react-burger-menu-btn")
+    WebElement menuBtn;
+
+    @FindBy(id = "logout_sidebar_link")
+    WebElement logoutBtn;
+
+    @FindBy(className = "shopping_cart_badge")
+    WebElement numOfEItems;
 
     // actions need in home page
     public String getActualTitle() {
@@ -46,6 +57,22 @@ public class InventoryPage extends BasePage {
 
     public void clickOnShopping_cart_containerBtn() {
         clickButton(shopping_cart_container);
+    }
+
+    public void clickOnMenuBtn() {
+        clickButton(menuBtn);
+    }
+
+    public void clickOnRemoveBackPackBtn() {
+        clickButton(removeSauceLabsBackpackBtn);
+    }
+
+    public void clickOnLogoutBtn() {
+        clickButton(logoutBtn);
+    }
+
+    public String getNumberOfItems() {
+        return getTextElement(numOfEItems);
     }
 
 }

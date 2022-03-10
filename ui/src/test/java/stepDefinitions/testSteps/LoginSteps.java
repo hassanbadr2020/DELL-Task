@@ -36,7 +36,13 @@ public class LoginSteps extends Base {
     }
 
     @Then("system displays an error message says {string}")
-    public void systemDisplaysAnErrorMessageSays( String errorMessage) {
+    public void systemDisplaysAnErrorMessageSays(String errorMessage) {
         Assert.assertEquals(errorMessage, signInPage.getActualMessage());
+    }
+
+    @Then("user has been logged out and in login page again")
+    public void userHasBeenLoggedOutAndInLoginPageAgain() {
+        Assert.assertTrue(base.driver.getCurrentUrl().equals("https://www.saucedemo.com/"));
+
     }
 }
