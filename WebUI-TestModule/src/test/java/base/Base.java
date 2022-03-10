@@ -1,6 +1,6 @@
 package base;
 
-import Environments.EnviromnetHandler.DataManager;
+import environments.handler.DataManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

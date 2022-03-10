@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>API-TestModule</module>
-        <module>WebUI-TestModule</module>
-        <module>Common-Utilities</module>
+        <module>api</module>
+        <module>common</module>
+        <module>ui</module>
     </modules>
 
     <properties>
