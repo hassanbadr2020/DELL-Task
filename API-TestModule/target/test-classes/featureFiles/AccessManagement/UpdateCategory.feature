@@ -1,6 +1,7 @@
 @UpdateCategory
 Feature: User Wants to update a category name or id or both of them with the category id
 
+  @HappyScenario
   Scenario Outline: User trays to update the category with valid data
     Given user wants to update a category with the category "<id>"
     And   the category already created before

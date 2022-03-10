@@ -14,8 +14,8 @@ public class InventorySteps extends Base {
         this.base = base;
     }
 
-    @Then("I'm in the home page")
-    public void iMInTheHomePage() {
+    @Then("user in the home page")
+    public void userInTheHomePage() {
         inventoryPage = new InventoryPage(base.driver);
         Assert.assertEquals("PRODUCTS",inventoryPage.getActualTitle());
     }
