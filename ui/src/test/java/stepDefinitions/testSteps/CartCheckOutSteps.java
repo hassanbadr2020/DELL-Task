@@ -77,4 +77,5 @@ public class CartCheckOutSteps extends Base {
         checkOutCompletePage = new CheckOutCompletePage(base.driver);
         Assert.assertEquals(message, checkOutCompletePage.getTextOfCompletedOrder());
     }
+
 }

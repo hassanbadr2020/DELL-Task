@@ -23,3 +23,15 @@ Feature: User wants to add some shopping items to cart
       | 2     | Total: $43.18 |
       #add three items
       | 3     | Total: $60.45 |
+
+  Scenario Outline: User wants to sort the items from A to Z or Z to A
+    Given user has been logged in with valid user name "standard_user" and password "secret_sauce"
+    And   user in the home page
+    When  select  one of the sorting type "<sortType>"
+    Then  the "<items>" have been sorted based the selection
+    Examples:
+      | sortType    | items                             |
+      | AZ          | Sauce Labs Backpack               |
+      | ZA          | Test.allTheThings() T-Shirt (Red) |
+      | low To High | Sauce Labs Onesie                 |
+      | High To low | Sauce Labs Fleece Jacket          |
