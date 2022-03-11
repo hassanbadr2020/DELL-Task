@@ -44,6 +44,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -53,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Mar 10, 2022 05:45:46 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Mar 11, 2022 02:39:55 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +70,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -84,6 +87,7 @@
 					<li><a href='#'>@HappyScenario</a></li>
 					<li><a href='#'>@login</a></li>
 					<li><a href='#'>@NegativeScenarios</a></li>
+					<li><a href='#'>@logout</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -124,10 +128,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -138,10 +142,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>9</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='92.857%'><span class='strong'>13</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='7.143%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -154,12 +158,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>60</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='85.542%'><span class='strong'>71</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='2.41%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12.048%'>10</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12.048%'>0</span> others
                 </div>
             </div>
         </div>
@@ -177,11 +181,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>User wants to add some shopping items to cart</span>
-						<span class='test-time'>Mar 10, 2022 05:47:26 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Mar 11, 2022 02:39:57 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -190,58 +194,142 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='fail'>
 	<div class='category-list'>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 1m 46s+3ms</span>
+	<span class='duration right label'>0h 2m 12s+622ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: user trays to add one or more than one item to the shopping cart</div>
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario Outline: user trays to add one or more than one item to the shopping cart</div>
 		<table class='runtime-table table-striped table'><tr><td>items</td><td>totalPrice</td></tr><tr><td>0</td><td>Total: $0.00</td></tr><tr><td>1</td><td>Total: $32.39</td></tr><tr><td>2</td><td>Total: $43.18</td></tr><tr><td>3</td><td>Total: $60.45</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>user trays to add one or more than one item to the shopping cart</div>
+		<li test-id='3' class='node scenario fail' status='fail'>
+			<div class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>user trays to add one or more than one item to the shopping cart</div>
 			<ul class='gc steps'>
-				<li test-id='5' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</h6>
-					<div class="node-step"></div>
+				<li test-id='4' class='gc * fail' status='fail'>
+					<h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>stepDefinitions.hooks.Hooks.getStart(io.cucumber.java.Scenario)</h6>
+					<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-05QK214', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:203)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20047/status] to be available after 20004 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:198)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:61)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:31)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:20)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:47)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 51 more
+</textarea>
 				</li>
-				<li test-id='6' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user in the home page</h6>
-					<div class="node-step"></div>
+				<li test-id='5' class='gc given skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='7' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userAddOneOrMoreThanOneToTheShoppingCart(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user add one or more than one "0" to the shopping cart</h6>
-					<div class="node-step"></div>
+				<li test-id='6' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And user in the home page</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='8' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userClicksOnTheShoppingCartToCheckout()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on the shopping cart to checkout</h6>
-					<div class="node-step"></div>
+				<li test-id='7' class='gc when skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userAddOneOrMoreThanOneToTheShoppingCart(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user add one or more than one "0" to the shopping cart</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='9' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.clickOnTheCheckoutButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the checkout button</h6>
-					<div class="node-step"></div>
+				<li test-id='8' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userClicksOnTheShoppingCartToCheckout()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And user clicks on the shopping cart to checkout</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='10' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.PaymentInformationSteps.fillPaymentInformationFirstNameLastNameAndPostalCode(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And fill payment information first name "Test" last name "Fake" and postal code "123456"</h6>
-					<div class="node-step"></div>
+				<li test-id='9' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.clickOnTheCheckoutButton()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And click on the checkout button</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='11' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.PaymentInformationSteps.clickOnContinueButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And Click on continue button</h6>
-					<div class="node-step"></div>
+				<li test-id='10' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.PaymentInformationSteps.fillPaymentInformationFirstNameLastNameAndPostalCode(java.lang.String,java.lang.String,java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And fill payment information first name "Test" last name "Fake" and postal code "123456"</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='12' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.theTotalPriceIs(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the total price is "Total: $0.00"</h6>
-					<div class="node-step"></div>
+				<li test-id='11' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.PaymentInformationSteps.clickOnContinueButton()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And Click on continue button</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='13' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.clicksOnTheFinishButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on the finish button</h6>
-					<div class="node-step"></div>
+				<li test-id='12' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.theTotalPriceIs(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And the total price is "Total: $0.00"</h6>
+					<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='14' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.theOrderHasBeenCreatedWithThanksWord(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"</h6>
-					<div class="node-step"></div>
+				<li test-id='13' class='gc and skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.clicksOnTheFinishButton()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And clicks on the finish button</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='14' class='gc then skip' status='skip'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.theOrderHasBeenCreatedWithThanksWord(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"</h6>
+					<div class="node-step">Step skipped</div>
+				</li>
+				<li test-id='15' class='gc * fail' status='fail'>
+					<h6 class="step-name" title=""><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>stepDefinitions.hooks.Hooks.tearDown(io.cucumber.java.Scenario)</h6>
+					<textarea disabled class="code-block">java.lang.NullPointerException
+	at utilities.MethodHelper.captureScreenshot(MethodHelper.java:26)
+	at stepDefinitions.hooks.Hooks.tearDown(Hooks.java:27)
+</textarea>
 				</li>
 			</ul>
 		</li>
@@ -382,12 +470,105 @@
 		</li>
 	</ul>
 </div>
+<div class='scenario outline node' test-id='55' status='pass'>
+	<span class='duration right label'>0h 0m 27s+701ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User wants to sort the items from A to Z or Z to A</div>
+		<table class='runtime-table table-striped table'><tr><td>sortType</td><td>items</td></tr><tr><td>AZ</td><td>Sauce Labs Backpack</td></tr><tr><td>ZA</td><td>Test.allTheThings() T-Shirt (Red)</td></tr><tr><td>low To High</td><td>Sauce Labs Onesie</td></tr><tr><td>High To low</td><td>Sauce Labs Fleece Jacket</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='56' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User wants to sort the items from A to Z or Z to A</div>
+			<ul class='gc steps'>
+				<li test-id='58' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='59' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user in the home page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='60' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When select  one of the sorting type "AZ"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='61' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the "Sauce Labs Backpack" have been sorted based the selection</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='63' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User wants to sort the items from A to Z or Z to A</div>
+			<ul class='gc steps'>
+				<li test-id='65' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='66' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user in the home page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='67' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When select  one of the sorting type "ZA"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='68' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the "Test.allTheThings() T-Shirt (Red)" have been sorted based the selection</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='70' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User wants to sort the items from A to Z or Z to A</div>
+			<ul class='gc steps'>
+				<li test-id='72' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='73' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user in the home page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='74' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When select  one of the sorting type "low To High"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='75' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the "Sauce Labs Onesie" have been sorted based the selection</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='77' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User wants to sort the items from A to Z or Z to A</div>
+			<ul class='gc steps'>
+				<li test-id='79' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='80' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user in the home page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='81' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When select  one of the sorting type "High To low"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='82' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the "Sauce Labs Fleece Jacket" have been sorted based the selection</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='55'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='84'>
 					<div class='test-heading'>
 						<span class='test-name'>User Login</span>
-						<span class='test-time'>Mar 10, 2022 05:49:24 PM</span>
+						<span class='test-time'>Mar 11, 2022 02:42:58 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -397,121 +578,25 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='56' status='pass'>
+<div class='scenario outline node' test-id='85' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@HappyScenario</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+660ms</span>
+	<span class='duration right label'>0h 0m 0s+841ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User try to login with valid email and password</div>
 		<table class='runtime-table table-striped table'><tr><td>email</td><td>password</td></tr><tr><td>standard_user</td><td>secret_sauce</td></tr></table>
 	</div>
 	<ul class='steps'>
-		<li test-id='57' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with valid email and password</div>
-			<ul class='gc steps'>
-				<li test-id='59' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='60' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "standard_user" "secret_sauce"</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='61' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='62' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user in the home page</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div class='scenario outline node' test-id='64' status='pass'>
-	<div class='category-list'>
-		<span class='category label'>@NegativeScenarios</span>
-	</div>
-	<span class='duration right label'>0h 0m 26s+609ms</span>
-	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User try to login with invalid credentials</div>
-		<table class='runtime-table table-striped table'><tr><td>email</td><td>password</td><td>errorMessage</td></tr><tr><td>standard_user</td><td>Aa123456</td><td>Epic sadface: Username and password do not match any user in this service</td></tr><tr><td>mmm@mmm.com</td><td>secret_sauce</td><td>Epic sadface: Username and password do not match any user in this service</td></tr><tr><td>standard_user</td><td></td><td>Epic sadface: Password is required</td></tr><tr><td></td><td>secret_sauce</td><td>Epic sadface: Username is required</td></tr></table>
-	</div>
-	<ul class='steps'>
-		<li test-id='65' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
-			<ul class='gc steps'>
-				<li test-id='67' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='68' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "standard_user" "Aa123456"</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='69' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='70' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='72' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
-			<ul class='gc steps'>
-				<li test-id='74' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='75' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "mmm@mmm.com" "secret_sauce"</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='76' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='77' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
-		</li>
-		<li test-id='79' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
-			<ul class='gc steps'>
-				<li test-id='81' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='82' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "standard_user" ""</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='83' class='gc and pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='84' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Password is required"</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
-		</li>
 		<li test-id='86' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with valid email and password</div>
 			<ul class='gc steps'>
 				<li test-id='88' class='gc given pass' status='pass'>
 					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='89' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "" "secret_sauce"</h6>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "standard_user" "secret_sauce"</h6>
 					<div class="node-step"></div>
 				</li>
 				<li test-id='90' class='gc and pass' status='pass'>
@@ -519,10 +604,152 @@
 					<div class="node-step"></div>
 				</li>
 				<li test-id='91' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user in the home page</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='93' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@NegativeScenarios</span>
+	</div>
+	<span class='duration right label'>0h 0m 22s+404ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User try to login with invalid credentials</div>
+		<table class='runtime-table table-striped table'><tr><td>email</td><td>password</td><td>errorMessage</td></tr><tr><td>standard_user</td><td>Aa123456</td><td>Epic sadface: Username and password do not match any user in this service</td></tr><tr><td>mmm@mmm.com</td><td>secret_sauce</td><td>Epic sadface: Username and password do not match any user in this service</td></tr><tr><td>standard_user</td><td></td><td>Epic sadface: Password is required</td></tr><tr><td></td><td>secret_sauce</td><td>Epic sadface: Username is required</td></tr></table>
+	</div>
+	<ul class='steps'>
+		<li test-id='94' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
+			<ul class='gc steps'>
+				<li test-id='96' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='97' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "standard_user" "Aa123456"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='98' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='99' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='101' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
+			<ul class='gc steps'>
+				<li test-id='103' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='104' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "mmm@mmm.com" "secret_sauce"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='105' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='106' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='108' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
+			<ul class='gc steps'>
+				<li test-id='110' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='111' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "standard_user" ""</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='112' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='113' class='gc then pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Password is required"</h6>
+					<div class="node-step"></div>
+				</li>
+			</ul>
+		</li>
+		<li test-id='115' class='node scenario pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>User try to login with invalid credentials</div>
+			<ul class='gc steps'>
+				<li test-id='117' class='gc given pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.iInLogInePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given A user in the login page</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='118' class='gc when pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.userEnterNameAndPasswordInFields(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enter name and password in fields "" "secret_sauce"</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='119' class='gc and pass' status='pass'>
+					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.clickOnTheLoginButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on the login button</h6>
+					<div class="node-step"></div>
+				</li>
+				<li test-id='120' class='gc then pass' status='pass'>
 					<h6 class="step-name" title="stepDefinitions.testSteps.LoginSteps.systemDisplaysAnErrorMessageSays(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then system displays an error message says "Epic sadface: Username is required"</h6>
 					<div class="node-step"></div>
 				</li>
 			</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='122'>
+					<div class='test-heading'>
+						<span class='test-name'>User wants to logout from the system</span>
+						<span class='test-time'>Mar 11, 2022 02:43:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='123' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@logout</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+353ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: user wants to logout when he authenticated</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='125' class='node given pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='126' class='node and pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user in the home page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='127' class='node when pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.testSteps.LogoutSteps.userClickOnMenuButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user click on menu button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='128' class='node and pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.testSteps.LogoutSteps.clickOnLogoutButton()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And click on logout button</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='129' class='node then pass' status='pass'>
+			<div class="step-name" title="stepDefinitions.testSteps.LoginSteps.userHasBeenLoggedOutAndInLoginPageAgain()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user has been logged out and in login page again</div>
+			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
@@ -570,13 +797,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@checkoutCart</span>
 						<span class='category-status right'>
-						<span class='label pass'>4</span>
+						<span class='label pass'>7</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -590,28 +818,48 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:47:26 PM</td>
+										<td>Mar 11, 2022 02:39:57 PM</td>
 										<td class='linked' test-id='1'>User wants to add some shopping items to cart</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:47:26 PM</td>
+										<td>Mar 11, 2022 02:39:57 PM</td>
 										<td class='linked' test-id='3'>user trays to add one or more than one item to the shopping cart</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:48:26 PM</td>
+										<td>Mar 11, 2022 02:41:23 PM</td>
 										<td class='linked' test-id='16'>user trays to add one or more than one item to the shopping cart</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:48:56 PM</td>
+										<td>Mar 11, 2022 02:41:52 PM</td>
 										<td class='linked' test-id='29'>user trays to add one or more than one item to the shopping cart</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:09 PM</td>
+										<td>Mar 11, 2022 02:42:07 PM</td>
 										<td class='linked' test-id='42'>user trays to add one or more than one item to the shopping cart</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 11, 2022 02:42:22 PM</td>
+										<td class='linked' test-id='56'>User wants to sort the items from A to Z or Z to A</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 11, 2022 02:42:31 PM</td>
+										<td class='linked' test-id='63'>User wants to sort the items from A to Z or Z to A</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 11, 2022 02:42:39 PM</td>
+										<td class='linked' test-id='70'>User wants to sort the items from A to Z or Z to A</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 11, 2022 02:42:48 PM</td>
+										<td class='linked' test-id='77'>User wants to sort the items from A to Z or Z to A</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -623,13 +871,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@HappyScenario</span>
 						<span class='category-status right'>
-						<span class='label pass'>7</span>
+						<span class='label pass'>5</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 7</span>
-							
+							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -643,38 +892,38 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:47:26 PM</td>
+										<td>Mar 11, 2022 02:39:57 PM</td>
 										<td class='linked' test-id='2'>user trays to add one or more than one item to the shopping cart</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:47:26 PM</td>
+										<td>Mar 11, 2022 02:39:57 PM</td>
 										<td class='linked' test-id='3'>user trays to add one or more than one item to the shopping cart</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:48:26 PM</td>
+										<td>Mar 11, 2022 02:41:23 PM</td>
 										<td class='linked' test-id='16'>user trays to add one or more than one item to the shopping cart</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:48:56 PM</td>
+										<td>Mar 11, 2022 02:41:52 PM</td>
 										<td class='linked' test-id='29'>user trays to add one or more than one item to the shopping cart</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:09 PM</td>
+										<td>Mar 11, 2022 02:42:07 PM</td>
 										<td class='linked' test-id='42'>user trays to add one or more than one item to the shopping cart</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:24 PM</td>
-										<td class='linked' test-id='56'>User try to login with valid email and password</td>
+										<td>Mar 11, 2022 02:42:58 PM</td>
+										<td class='linked' test-id='85'>User try to login with valid email and password</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:24 PM</td>
-										<td class='linked' test-id='57'>User try to login with valid email and password</td>
+										<td>Mar 11, 2022 02:42:58 PM</td>
+										<td class='linked' test-id='86'>User try to login with valid email and password</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -706,33 +955,33 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:49:24 PM</td>
-										<td class='linked' test-id='55'>User Login</td>
+										<td>Mar 11, 2022 02:42:58 PM</td>
+										<td class='linked' test-id='84'>User Login</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:24 PM</td>
-										<td class='linked' test-id='57'>User try to login with valid email and password</td>
+										<td>Mar 11, 2022 02:42:58 PM</td>
+										<td class='linked' test-id='86'>User try to login with valid email and password</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:33 PM</td>
-										<td class='linked' test-id='65'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:06 PM</td>
+										<td class='linked' test-id='94'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:41 PM</td>
-										<td class='linked' test-id='72'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:13 PM</td>
+										<td class='linked' test-id='101'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:50 PM</td>
-										<td class='linked' test-id='79'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:20 PM</td>
+										<td class='linked' test-id='108'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:59 PM</td>
-										<td class='linked' test-id='86'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:28 PM</td>
+										<td class='linked' test-id='115'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -764,28 +1013,66 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Mar 10, 2022 05:49:33 PM</td>
-										<td class='linked' test-id='64'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:06 PM</td>
+										<td class='linked' test-id='93'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:33 PM</td>
-										<td class='linked' test-id='65'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:06 PM</td>
+										<td class='linked' test-id='94'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:41 PM</td>
-										<td class='linked' test-id='72'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:13 PM</td>
+										<td class='linked' test-id='101'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:50 PM</td>
-										<td class='linked' test-id='79'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:20 PM</td>
+										<td class='linked' test-id='108'>User try to login with invalid credentials</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Mar 10, 2022 05:49:59 PM</td>
-										<td class='linked' test-id='86'>User try to login with invalid credentials</td>
+										<td>Mar 11, 2022 02:43:28 PM</td>
+										<td class='linked' test-id='115'>User try to login with invalid credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@logout</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 11, 2022 02:43:36 PM</td>
+										<td class='linked' test-id='122'>User wants to logout from the system</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 11, 2022 02:43:36 PM</td>
+										<td class='linked' test-id='123'>user wants to logout when he authenticated</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -802,7 +1089,166 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 11, 2022 02:39:57 PM</td>
+										<td class='linked' test-id='4'>stepDefinitions.hooks.Hooks.getStart(io.cucumber.java.Scenario)</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-05QK214', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:203)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20047/status] to be available after 20004 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:198)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:61)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:31)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:20)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:47)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 51 more
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 11, 2022 02:40:21 PM</td>
+										<td class='linked' test-id='15'>stepDefinitions.hooks.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException
+	at utilities.MethodHelper.captureScreenshot(MethodHelper.java:26)
+	at stepDefinitions.hooks.Hooks.tearDown(Hooks.java:27)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -810,37 +1256,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>14</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>60</div>
+					<div class='panel-lead'>83</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 10, 2022 05:45:46 PM</div>
+					<div class='panel-lead'>Mar 11, 2022 02:39:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 10, 2022 05:50:00 PM</div>
+			 		<div class='panel-lead'>Mar 11, 2022 02:43:39 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 4m 14s+317ms</div>
+					<div class='panel-lead'>0h 3m 43s+683ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -857,20 +1303,20 @@
 						</tr>
 						<tr>
 							<td>@checkoutCart</td>
-							<td>4</td>
-							<td>0</td>
+							<td>7</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									80%
+									77.778%
 							</td>
 						</tr>
 						<tr>
 							<td>@HappyScenario</td>
-							<td>7</td>
-							<td>0</td>
+							<td>5</td>
+							<td>2</td>
 							<td>0</td>
 							<td>
-									100%
+									71.429%
 							</td>
 						</tr>
 						<tr>
@@ -891,6 +1337,15 @@
 									100%
 							</td>
 						</tr>
+						<tr>
+							<td>@logout</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									50%
+							</td>
+						</tr>
 					</table>
 				</div>
 			</div>
@@ -902,39 +1357,39 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
+                parentCount: 3,
 				passParent: 2,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
-				childCount: 9,
-				passChild: 9,
-				failChild: 0,
+				exceptionsParent: 1,
+				childCount: 14,
+				passChild: 13,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 60,
-				passGrandChild: 60,
-				failGrandChild: 0,
+				exceptionsChild: 1,
+				grandChildCount: 83,
+				passGrandChild: 71,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 10,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 12,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "User wants to add some shopping items to cart":106.003,"User Login":35.301
+			        "User wants to add some shopping items to cart":172.301,"User Login":30.365,"User wants to logout from the system":2.353
 			};
 		</script>
 	

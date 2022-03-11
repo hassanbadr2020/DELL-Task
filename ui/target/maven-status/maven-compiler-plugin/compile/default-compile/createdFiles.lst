@@ -1,0 +1,7 @@
+pages\SigInPage.class
+pages\BasePage.class
+pages\InventoryPage.class
+pages\CheckStepOnePage.class
+pages\CheckOutCompletePage.class
+pages\CartPage.class
+pages\CheckoutPage.class

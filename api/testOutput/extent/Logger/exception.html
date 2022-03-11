@@ -128,7 +128,7 @@
 <tr class="s-fail" test-id="5" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">When User Send a post request to create the Category <br/><span class="text-muted text-sm">User trays to create a new Category with Valid data</span></td>
-	<td>0h 0m 10s+408msc</td>
+	<td>0h 0m 18s+310msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -138,13 +138,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -164,10 +165,10 @@
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -194,10 +195,10 @@
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:148)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -210,10 +211,10 @@
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -230,7 +231,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:57)
 	at apiRequests.ApiRequests.createCategory(ApiRequests.java:18)
 	at stepDefinitions.testSteps.CreateCategory.lambda$new$1(CreateCategory.java:25)
-	at ✽.User Send a post request to create the Category(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/CreateCategory.feature:9)
+	at ?.User Send a post request to create the Category(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/CreateCategory.feature:9)
 </textarea>
 	</td>
 </tr>
@@ -238,7 +239,7 @@
 <tr class="s-fail" test-id="12" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">When User Send a post request to create the Category <br/><span class="text-muted text-sm">User trays to create a new Category with Valid data</span></td>
-	<td>0h 0m 4s+71msc</td>
+	<td>0h 0m 4s+89msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -248,13 +249,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -268,10 +270,10 @@
 	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
 	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -292,10 +294,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -306,10 +308,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -324,7 +326,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:57)
 	at apiRequests.ApiRequests.createCategory(ApiRequests.java:18)
 	at stepDefinitions.testSteps.CreateCategory.lambda$new$1(CreateCategory.java:25)
-	at ✽.User Send a post request to create the Category(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/CreateCategory.feature:9)
+	at ?.User Send a post request to create the Category(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/CreateCategory.feature:9)
 </textarea>
 	</td>
 </tr>
@@ -332,7 +334,7 @@
 <tr class="s-fail" test-id="21" parent-id="17">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">And the category already created before <br/><span class="text-muted text-sm">User trays to delete a category with valid id</span></td>
-	<td>0h 0m 4s+43msc</td>
+	<td>0h 0m 4s+52msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -344,13 +346,14 @@
 		
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -364,10 +367,10 @@
 	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
 	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -388,10 +391,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -402,10 +405,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -420,7 +423,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:57)
 	at apiRequests.ApiRequests.createCategory(ApiRequests.java:18)
 	at stepDefinitions.testSteps.UpdateCategory.lambda$new$0(UpdateCategory.java:21)
-	at ✽.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/DeleteCategory.feature:7)
+	at ?.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/DeleteCategory.feature:7)
 </textarea>
 	</td>
 </tr>
@@ -428,7 +431,7 @@
 <tr class="s-fail" test-id="27" parent-id="17">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">And the category already created before <br/><span class="text-muted text-sm">User trays to delete a category with valid id</span></td>
-	<td>0h 0m 4s+49msc</td>
+	<td>0h 0m 4s+45msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -440,13 +443,14 @@
 		
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -460,10 +464,10 @@
 	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
 	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -484,10 +488,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -498,10 +502,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -516,7 +520,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:57)
 	at apiRequests.ApiRequests.createCategory(ApiRequests.java:18)
 	at stepDefinitions.testSteps.UpdateCategory.lambda$new$0(UpdateCategory.java:21)
-	at ✽.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/DeleteCategory.feature:7)
+	at ?.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/DeleteCategory.feature:7)
 </textarea>
 	</td>
 </tr>
@@ -524,7 +528,7 @@
 <tr class="s-fail" test-id="34" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given user send a request to get Category with valid "abcat0010000" <br/><span class="text-muted text-sm">User try to get a Category with the id of the Category</span></td>
-	<td>0h 0m 4s+186msc</td>
+	<td>0h 0m 4s+136msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -534,13 +538,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -560,10 +565,10 @@
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -575,10 +580,10 @@
 	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -599,10 +604,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -613,10 +618,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -633,7 +638,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getOneCategory(ApiRequests.java:29)
 	at stepDefinitions.testSteps.GetACategory.lambda$new$0(GetACategory.java:18)
-	at ✽.user send a request to get Category with valid "abcat0010000"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:6)
+	at ?.user send a request to get Category with valid "abcat0010000"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:6)
 </textarea>
 	</td>
 </tr>
@@ -641,7 +646,7 @@
 <tr class="s-fail" test-id="40" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given user send a request to get Category with valid "abcat0020001" <br/><span class="text-muted text-sm">User try to get a Category with the id of the Category</span></td>
-	<td>0h 0m 4s+59msc</td>
+	<td>0h 0m 4s+41msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -651,13 +656,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -672,10 +678,10 @@
 	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:452)
 	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -685,10 +691,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -709,10 +715,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -723,10 +729,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -741,7 +747,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getOneCategory(ApiRequests.java:29)
 	at stepDefinitions.testSteps.GetACategory.lambda$new$0(GetACategory.java:18)
-	at ✽.user send a request to get Category with valid "abcat0020001"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:6)
+	at ?.user send a request to get Category with valid "abcat0020001"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:6)
 </textarea>
 	</td>
 </tr>
@@ -749,7 +755,7 @@
 <tr class="s-fail" test-id="46" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given user send a request to get Category with valid "abcat0020002" <br/><span class="text-muted text-sm">User try to get a Category with the id of the Category</span></td>
-	<td>0h 0m 4s+64msc</td>
+	<td>0h 0m 4s+32msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -759,13 +765,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -780,10 +787,10 @@
 	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:452)
 	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -793,10 +800,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -817,10 +824,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -831,10 +838,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -849,7 +856,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getOneCategory(ApiRequests.java:29)
 	at stepDefinitions.testSteps.GetACategory.lambda$new$0(GetACategory.java:18)
-	at ✽.user send a request to get Category with valid "abcat0020002"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:6)
+	at ?.user send a request to get Category with valid "abcat0020002"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:6)
 </textarea>
 	</td>
 </tr>
@@ -857,7 +864,7 @@
 <tr class="s-fail" test-id="53" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given user send a request to get Category with invalid "0" <br/><span class="text-muted text-sm">User try to get a post with the invalid id of the Category</span></td>
-	<td>0h 0m 4s+49msc</td>
+	<td>0h 0m 4s+32msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -867,13 +874,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -888,10 +896,10 @@
 	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:452)
 	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -901,10 +909,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -925,10 +933,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -939,10 +947,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -957,7 +965,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getOneCategory(ApiRequests.java:29)
 	at stepDefinitions.testSteps.GetACategory.lambda$new$0(GetACategory.java:18)
-	at ✽.user send a request to get Category with invalid "0"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:18)
+	at ?.user send a request to get Category with invalid "0"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:18)
 </textarea>
 	</td>
 </tr>
@@ -965,7 +973,7 @@
 <tr class="s-fail" test-id="58" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given user send a request to get Category with invalid "101" <br/><span class="text-muted text-sm">User try to get a post with the invalid id of the Category</span></td>
-	<td>0h 0m 4s+33msc</td>
+	<td>0h 0m 4s+29msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -975,13 +983,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -996,10 +1005,10 @@
 	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:452)
 	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1009,10 +1018,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1033,10 +1042,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1047,10 +1056,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1065,7 +1074,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getOneCategory(ApiRequests.java:29)
 	at stepDefinitions.testSteps.GetACategory.lambda$new$0(GetACategory.java:18)
-	at ✽.user send a request to get Category with invalid "101"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:18)
+	at ?.user send a request to get Category with invalid "101"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:18)
 </textarea>
 	</td>
 </tr>
@@ -1073,7 +1082,7 @@
 <tr class="s-fail" test-id="63" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given user send a request to get Category with invalid "jk" <br/><span class="text-muted text-sm">User try to get a post with the invalid id of the Category</span></td>
-	<td>0h 0m 4s+46msc</td>
+	<td>0h 0m 4s+32msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1083,13 +1092,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -1104,10 +1114,10 @@
 	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:452)
 	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1117,10 +1127,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1141,10 +1151,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1155,10 +1165,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1173,7 +1183,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getOneCategory(ApiRequests.java:29)
 	at stepDefinitions.testSteps.GetACategory.lambda$new$0(GetACategory.java:18)
-	at ✽.user send a request to get Category with invalid "jk"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:18)
+	at ?.user send a request to get Category with invalid "jk"(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetACategory.feature:18)
 </textarea>
 	</td>
 </tr>
@@ -1181,7 +1191,7 @@
 <tr class="s-fail" test-id="69" parent-id="67">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">Given User send a get request to list all Categories <br/><span class="text-muted text-sm">User Try to get All Categories</span></td>
-	<td>0h 0m 4s+65msc</td>
+	<td>0h 0m 4s+34msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1191,13 +1201,14 @@
 	<td colspan="5">
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -1212,10 +1223,10 @@
 	at io.restassured.internal.http.HTTPBuilder.request(HTTPBuilder.java:452)
 	at io.restassured.internal.http.HTTPBuilder$request$3.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendHttpRequest(RequestSpecificationImpl.groovy:1451)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1225,10 +1236,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1200)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1249,10 +1260,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1263,10 +1274,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1281,7 +1292,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:55)
 	at apiRequests.ApiRequests.getAllCategories(ApiRequests.java:25)
 	at stepDefinitions.testSteps.GetAllCategories.lambda$new$1(GetAllCategories.java:21)
-	at ✽.User send a get request to list all Categories(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetAllCategories.feature:6)
+	at ?.User send a get request to list all Categories(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/GetAllCategories.feature:6)
 </textarea>
 	</td>
 </tr>
@@ -1289,7 +1300,7 @@
 <tr class="s-fail" test-id="77" parent-id="73">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">And the category already created before <br/><span class="text-muted text-sm">User trays to update the category with valid data</span></td>
-	<td>0h 0m 4s+36msc</td>
+	<td>0h 0m 4s+33msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1301,13 +1312,14 @@
 		
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -1323,10 +1335,10 @@
 	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
 	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1347,10 +1359,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1361,10 +1373,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1379,7 +1391,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:57)
 	at apiRequests.ApiRequests.createCategory(ApiRequests.java:18)
 	at stepDefinitions.testSteps.UpdateCategory.lambda$new$0(UpdateCategory.java:21)
-	at ✽.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/UpdateCategory.feature:7)
+	at ?.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/UpdateCategory.feature:7)
 </textarea>
 	</td>
 </tr>
@@ -1387,7 +1399,7 @@
 <tr class="s-fail" test-id="85" parent-id="73">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">And the category already created before <br/><span class="text-muted text-sm">User trays to update the category with valid data</span></td>
-	<td>0h 0m 4s+55msc</td>
+	<td>0h 0m 4s+35msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1399,13 +1411,14 @@
 		
 		
 		<textarea disabled class="code-block">java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
 	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:121)
 	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
 	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
@@ -1419,10 +1432,10 @@
 	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
 	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1181)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1443,10 +1456,10 @@
 	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
 	at io.restassured.filter.FilterContext$next.call(Unknown Source)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1655)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1457,10 +1470,10 @@
 	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
 	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
 	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1661)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
 	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
 	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
@@ -1475,7 +1488,7 @@
 	at apitUtilities.ApiRequestBuilder.performRequest(ApiRequestBuilder.java:57)
 	at apiRequests.ApiRequests.createCategory(ApiRequests.java:18)
 	at stepDefinitions.testSteps.UpdateCategory.lambda$new$0(UpdateCategory.java:21)
-	at ✽.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/UpdateCategory.feature:7)
+	at ?.the category already created before(file:///F:/DELL-Task/api/src/test/resources/featureFiles/AccessManagement/UpdateCategory.feature:7)
 </textarea>
 	</td>
 </tr>
@@ -1506,7 +1519,7 @@
 <tr class="s-fail" test-id="9" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User trays to create a new Category with Valid data</span></td>
-	<td>0h 0m 0s+5msc</td>
+	<td>0h 0m 0s+58msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1542,7 +1555,7 @@
 <tr class="s-fail" test-id="24" parent-id="17">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User trays to delete a category with valid id</span></td>
-	<td>0h 0m 0s+2msc</td>
+	<td>0h 0m 0s+1msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1560,7 +1573,7 @@
 <tr class="s-fail" test-id="30" parent-id="17">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User trays to delete a category with valid id</span></td>
-	<td>0h 0m 0s+1msc</td>
+	<td>0h 0m 0s+0msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1578,7 +1591,7 @@
 <tr class="s-fail" test-id="38" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User try to get a Category with the id of the Category</span></td>
-	<td>0h 0m 0s+2msc</td>
+	<td>0h 0m 0s+1msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1596,7 +1609,7 @@
 <tr class="s-fail" test-id="44" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User try to get a Category with the id of the Category</span></td>
-	<td>0h 0m 0s+2msc</td>
+	<td>0h 0m 0s+1msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1614,7 +1627,7 @@
 <tr class="s-fail" test-id="50" parent-id="31">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User try to get a Category with the id of the Category</span></td>
-	<td>0h 0m 0s+0msc</td>
+	<td>0h 0m 0s+1msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1686,7 +1699,7 @@
 <tr class="s-fail" test-id="72" parent-id="67">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User Try to get All Categories</span></td>
-	<td>0h 0m 0s+2msc</td>
+	<td>0h 0m 0s+1msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1704,7 +1717,7 @@
 <tr class="s-fail" test-id="82" parent-id="73">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User trays to update the category with valid data</span></td>
-	<td>0h 0m 0s+2msc</td>
+	<td>0h 0m 0s+1msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1722,7 +1735,7 @@
 <tr class="s-fail" test-id="90" parent-id="73">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
 	<td class="_600">stepDefinitions.hooks.Hooks.afterScenario(io.cucumber.java.Scenario) <br/><span class="text-muted text-sm">User trays to update the category with valid data</span></td>
-	<td>0h 0m 0s+1msc</td>
+	<td>0h 0m 0s+0msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -1760,7 +1773,7 @@
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Mar 10, 2022 08:19:51 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Mar 11, 2022 02:30:40 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>
