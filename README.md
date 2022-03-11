@@ -5,5 +5,5 @@ this task fabricated for Dell technolgy as an assignment
 - maven
 - nodejs
 - chrome Version 99.0.4844.51
-- and you can execute easly using the any ide 
+- and you can execute easly using the any ide "Intellij recommended"
 - Then you can run the two module api or ui from runner of the each module   
