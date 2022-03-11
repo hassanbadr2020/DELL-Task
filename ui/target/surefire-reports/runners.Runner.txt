@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: runners.Runner
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 230.743 s <<< FAILURE! - in runners.Runner
+user trays to add one or more than one item to the shopping cart(User wants to add some shopping items to cart)  Time elapsed: 25.238 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-05QK214', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20047/status] to be available after 20004 ms
+Caused by: java.util.concurrent.TimeoutException
+
+user trays to add one or more than one item to the shopping cart(User wants to add some shopping items to cart)  Time elapsed: 25.245 s  <<< ERROR!
+java.lang.NullPointerException
+

@@ -56,7 +56,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Mar 10, 2022 05:45:46 PM</span>
+                    <span class="badge badge-primary">Mar 11, 2022 02:39:55 PM</span>
                 </a>
             </li>
         </ul>
@@ -78,6 +78,14 @@
             <i class="fa fa-tag"></i>
           </span>
           <span class="title">Tags</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown" onclick="toggleView('exception-view')">
+        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
+          <span class="icon-holder">
+            <i class="fa fa-bug"></i>
+          </span>
+          <span class="title">Exception</span>
         </a>
       </li>
       <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -109,11 +117,11 @@
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
+						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
 						
 						
 						
-						
-						
+						<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning pull-right"></span></a>
 						<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
@@ -127,34 +135,35 @@
 						<a class="dropdown-item" href="#">@HappyScenario</a>
 						<a class="dropdown-item" href="#">@login</a>
 						<a class="dropdown-item" href="#">@NegativeScenarios</a>
+						<a class="dropdown-item" href="#">@logout</a>
 					</ul>
 				</li>
 			</ul>
 		</div>
 		<div class="test-list-wrapper scrollable">
 			<ul class="test-list-item">
-				<li class="test-item"  status="pass" test-id="1"
+				<li class="test-item"  status="fail" test-id="1"
 					author=""
 					tag="@checkoutCart"
 					device="">
-					<div class="status-avatar pass-bg">
-						<i class="fa fa-check text-white"></i>
+					<div class="status-avatar fail-bg">
+						<i class="fa fa-times text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">User wants to add some shopping items to cart</p>
-							<p class="duration text-sm">0h 1m 46s+3ms</p>
-							<span class="datetime">17:47:26 PM</span>
+							<p class="duration text-sm">0h 2m 52s+301ms</p>
+							<span class="datetime">14:39:57 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-pass">User wants to add some shopping items to cart</h5>
-									<span class='badge badge-success'>03.10.2022 17:47:26</span>
-									<span class='badge badge-danger'>03.10.2022 17:49:12</span>
-									<span class='badge badge-default'>0h 1m 46s+3ms</span>
+									<h5 class="test-status text-fail">User wants to add some shopping items to cart</h5>
+									<span class='badge badge-success'>03.11.2022 14:39:57</span>
+									<span class='badge badge-danger'>03.11.2022 14:42:49</span>
+									<span class='badge badge-default'>0h 2m 52s+301ms</span>
 								</div>
 								<div class="m-t-15">
 			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @checkoutCart</span>
@@ -170,8 +179,8 @@
 		<div class="card-header" role="tab">
 			<div class="card-title pl-3">
 				<div class="node">user trays to add one or more than one item to the shopping cart</div>
-				<div class="status-avatar float-left pass-bg">
-					<i class="fa fa-check text-white"></i>
+				<div class="status-avatar float-left fail-bg">
+					<i class="fa fa-times text-white"></i>
 				</div>
 			</div>
 		</div>
@@ -180,82 +189,172 @@
 							<div class="card-header" role="tab">
 								<div class="card-title outline-child">
 									<div class="node">user trays to add one or more than one item to the shopping cart</div>
-									<div class="status-avatar float-left pass-bg">
-										<i class="fa fa-check text-white"></i>
+									<div class="status-avatar float-left fail-bg">
+										<i class="fa fa-times text-white"></i>
 									</div>
 								</div>
 							</div>
 							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start asterisk" title="">
+										<span class="alert-icon fail-bg">
+											<i class="fa fa-times text-white"></i>
+										</span>
+										<span>stepDefinitions.hooks.Hooks.getStart(io.cucumber.java.Scenario)</span>
+									</div>
+				<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-05QK214', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:203)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20047/status] to be available after 20004 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:198)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:61)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:31)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:20)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:47)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 51 more
+</textarea>
 									<div class="d-flex align-items-center justify-content-start given" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And user in the home page</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start when" title="stepDefinitions.testSteps.CartCheckOutSteps.userAddOneOrMoreThanOneToTheShoppingCart(java.lang.String)">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>When user add one or more than one "0" to the shopping cart</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.CartCheckOutSteps.userClicksOnTheShoppingCartToCheckout()">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And user clicks on the shopping cart to checkout</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.CartCheckOutSteps.clickOnTheCheckoutButton()">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And click on the checkout button</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.PaymentInformationSteps.fillPaymentInformationFirstNameLastNameAndPostalCode(java.lang.String,java.lang.String,java.lang.String)">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And fill payment information first name "Test" last name "Fake" and postal code "123456"</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.PaymentInformationSteps.clickOnContinueButton()">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And Click on continue button</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.CartCheckOutSteps.theTotalPriceIs(java.lang.String)">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And the total price is "Total: $0.00"</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.CartCheckOutSteps.clicksOnTheFinishButton()">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>And clicks on the finish button</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
 									<div class="d-flex align-items-center justify-content-start then" title="stepDefinitions.testSteps.CartCheckOutSteps.theOrderHasBeenCreatedWithThanksWord(java.lang.String)">
-										<span class="alert-icon pass-bg">
-											<i class="fa fa-check text-white"></i>
+										<span class="alert-icon skip-bg">
+											<i class="fa fa-long-arrow-right text-white"></i>
 										</span>
 										<span>Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"</span>
 									</div>
-				<div class="details"></div>
+				<div class="details">Step skipped</div>
+									<div class="d-flex align-items-center justify-content-start asterisk" title="">
+										<span class="alert-icon fail-bg">
+											<i class="fa fa-times text-white"></i>
+										</span>
+										<span>stepDefinitions.hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+									</div>
+				<textarea disabled class="code-block">java.lang.NullPointerException
+	at utilities.MethodHelper.captureScreenshot(MethodHelper.java:26)
+	at stepDefinitions.hooks.Hooks.tearDown(Hooks.java:27)
+</textarea>
 							</div>
 						</div>
 						<div class="card-body l1">
@@ -506,10 +605,182 @@
 						</div>
 				</div>
 	</div>
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">User wants to sort the items from A to Z or Z to A</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse scenario_outline">
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">User wants to sort the items from A to Z or Z to A</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And user in the home page</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When select  one of the sorting type "AZ"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then the "Sauce Labs Backpack" have been sorted based the selection</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">User wants to sort the items from A to Z or Z to A</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And user in the home page</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When select  one of the sorting type "ZA"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then the "Test.allTheThings() T-Shirt (Red)" have been sorted based the selection</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">User wants to sort the items from A to Z or Z to A</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And user in the home page</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When select  one of the sorting type "low To High"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then the "Sauce Labs Onesie" have been sorted based the selection</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+						<div class="card-body l1">
+							<div class="card-header" role="tab">
+								<div class="card-title outline-child">
+									<div class="node">User wants to sort the items from A to Z or Z to A</div>
+									<div class="status-avatar float-left pass-bg">
+										<i class="fa fa-check text-white"></i>
+									</div>
+								</div>
+							</div>
+							<div class="card-body collapse mt-3">
+									<div class="d-flex align-items-center justify-content-start given" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>And user in the home page</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start when" title="stepDefinitions.testSteps.InventorySteps.selectOneOfTheSortingType(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>When select  one of the sorting type "High To low"</span>
+									</div>
+				<div class="details"></div>
+									<div class="d-flex align-items-center justify-content-start then" title="stepDefinitions.testSteps.InventorySteps.theItemsHaveBeenSortedBasedTheSelection(java.lang.String)">
+										<span class="alert-icon pass-bg">
+											<i class="fa fa-check text-white"></i>
+										</span>
+										<span>Then the "Sauce Labs Fleece Jacket" have been sorted based the selection</span>
+									</div>
+				<div class="details"></div>
+							</div>
+						</div>
+				</div>
+	</div>
 </div>
 					</div>
 				</li>
-				<li class="test-item"  status="pass" test-id="55"
+				<li class="test-item"  status="pass" test-id="84"
 					author=""
 					tag="@login"
 					device="">
@@ -519,8 +790,8 @@
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">User Login</p>
-							<p class="duration text-sm">0h 0m 35s+301ms</p>
-							<span class="datetime">17:49:24 PM</span>
+							<p class="duration text-sm">0h 0m 30s+365ms</p>
+							<span class="datetime">14:42:58 PM</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
@@ -528,9 +799,9 @@
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
 									<h5 class="test-status text-pass">User Login</h5>
-									<span class='badge badge-success'>03.10.2022 17:49:24</span>
-									<span class='badge badge-danger'>03.10.2022 17:49:59</span>
-									<span class='badge badge-default'>0h 0m 35s+301ms</span>
+									<span class='badge badge-success'>03.11.2022 14:42:58</span>
+									<span class='badge badge-danger'>03.11.2022 14:43:29</span>
+									<span class='badge badge-default'>0h 0m 30s+365ms</span>
 								</div>
 								<div class="m-t-15">
 			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @login</span>
@@ -769,6 +1040,91 @@
 </div>
 					</div>
 				</li>
+				<li class="test-item"  status="pass" test-id="122"
+					author=""
+					tag="@logout"
+					device="">
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
+					</div>
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">User wants to logout from the system</p>
+							<p class="duration text-sm">0h 0m 2s+353ms</p>
+							<span class="datetime">14:43:36 PM</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="detail-head">
+							<div class="p-v-10 d-inline-block">
+								<div class="info">
+									<h5 class="test-status text-pass">User wants to logout from the system</h5>
+									<span class='badge badge-success'>03.11.2022 14:43:36</span>
+									<span class='badge badge-danger'>03.11.2022 14:43:38</span>
+									<span class='badge badge-default'>0h 0m 2s+353ms</span>
+								</div>
+								<div class="m-t-15">
+			<span class="badge badge-pill badge-default"><i class="fa fa-tag"></i> @logout</span>
+								</div>
+								<div class="m-t-10 m-l-5">
+									
+								</div>
+							</div>
+						</div>
+
+<div class="accordion mt-4">
+	<div class="card">
+		<div class="card-header" role="tab">
+			<div class="card-title pl-3">
+				<div class="node">user wants to logout when he authenticated</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
+				</div>
+			</div>
+		</div>
+				<div class="collapse">
+					<div class="card-body">
+							<div class="d-flex align-items-center justify-content-start given" title="stepDefinitions.testSteps.CartCheckOutSteps.userHasBeenLoggedInWithValidUserNameAndPassword(java.lang.String,java.lang.String)">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Given user has been logged in with valid user name "standard_user" and password "secret_sauce"</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.InventorySteps.userInTheHomePage()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And user in the home page</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start when" title="stepDefinitions.testSteps.LogoutSteps.userClickOnMenuButton()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>When user click on menu button</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start and" title="stepDefinitions.testSteps.LogoutSteps.clickOnLogoutButton()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>And click on logout button</span>
+							</div>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="stepDefinitions.testSteps.LoginSteps.userHasBeenLoggedOutAndInLoginPageAgain()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
+								</span>
+								<span>Then user has been logged out and in login page again</span>
+							</div>
+				<div class="details"></div>
+					</div>
+				</div>
+	</div>
+</div>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -799,7 +1155,7 @@
 			<ul class="tools text-right">
 				<li>
 					<a href="#">
-					<span class="badge badge-primary">4</span>
+					<span class="badge badge-primary">5</span>
 					</a>
 				</li>
 			</ul>
@@ -810,10 +1166,10 @@
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">@checkoutCart</p>
-							<p class="duration text-sm">5 tests</p>
+							<p class="duration text-sm">9 tests</p>
 							<span class="datetime">
-							<span class='badge badge-success'>4</span>
-							
+							<span class='badge badge-success'>7</span>
+							<span class='badge badge-danger'>1</span>
 							
 							
 							</span>
@@ -822,8 +1178,8 @@
 					<div class="test-contents d-none">
 						<div class="info">
 							<h4>@checkoutCart</h4>
-							<span status="pass" class='badge badge-success'>4 passed</span>
-							
+							<span status="pass" class='badge badge-success'>7 passed</span>
+							<span status="fail" class='badge badge-danger'>1 failed</span>
 							
 							
 						</div>
@@ -836,24 +1192,24 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>17:47:26 PM</td>
+									<td>14:39:57 PM</td>
 									<td class='linked' test-id='1'>
 										User wants to add some shopping items to cart
 									</td>
 								</tr>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>17:47:26 PM</td>
+									<td>14:39:57 PM</td>
 									<td class='linked' test-id='3'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -867,7 +1223,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:48:26 PM</td>
+									<td>14:41:23 PM</td>
 									<td class='linked' test-id='16'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -881,7 +1237,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:48:56 PM</td>
+									<td>14:41:52 PM</td>
 									<td class='linked' test-id='29'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -895,11 +1251,67 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:09 PM</td>
+									<td>14:42:07 PM</td>
 									<td class='linked' test-id='42'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
 											<span class="badge badge-default">User wants to add some shopping items to cart.user trays to add one or more than one item to the shopping cart</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>14:42:22 PM</td>
+									<td class='linked' test-id='56'>
+										User wants to sort the items from A to Z or Z to A
+										<div class="">
+											<span class="badge badge-default">User wants to add some shopping items to cart.User wants to sort the items from A to Z or Z to A</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>14:42:31 PM</td>
+									<td class='linked' test-id='63'>
+										User wants to sort the items from A to Z or Z to A
+										<div class="">
+											<span class="badge badge-default">User wants to add some shopping items to cart.User wants to sort the items from A to Z or Z to A</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>14:42:39 PM</td>
+									<td class='linked' test-id='70'>
+										User wants to sort the items from A to Z or Z to A
+										<div class="">
+											<span class="badge badge-default">User wants to add some shopping items to cart.User wants to sort the items from A to Z or Z to A</span>
+										</div>
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>14:42:48 PM</td>
+									<td class='linked' test-id='77'>
+										User wants to sort the items from A to Z or Z to A
+										<div class="">
+											<span class="badge badge-default">User wants to add some shopping items to cart.User wants to sort the items from A to Z or Z to A</span>
 										</div>
 									</td>
 								</tr>
@@ -913,8 +1325,8 @@
 							<p class="name">@HappyScenario</p>
 							<p class="duration text-sm">7 tests</p>
 							<span class="datetime">
-							<span class='badge badge-success'>7</span>
-							
+							<span class='badge badge-success'>5</span>
+							<span class='badge badge-danger'>2</span>
 							
 							
 							</span>
@@ -923,8 +1335,8 @@
 					<div class="test-contents d-none">
 						<div class="info">
 							<h4>@HappyScenario</h4>
-							<span status="pass" class='badge badge-success'>7 passed</span>
-							
+							<span status="pass" class='badge badge-success'>5 passed</span>
+							<span status="fail" class='badge badge-danger'>2 failed</span>
 							
 							
 						</div>
@@ -937,13 +1349,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>17:47:26 PM</td>
+									<td>14:39:57 PM</td>
 									<td class='linked' test-id='2'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -951,13 +1363,13 @@
 										</div>
 									</td>
 								</tr>
-								<tr class="tag-test-status" status="pass">
+								<tr class="tag-test-status" status="fail">
 									<td>
-										<div class='status-avatar pass-bg'>
-											<i class="fa fa-check text-white"></i>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
 										</div>
 									</td>
-									<td>17:47:26 PM</td>
+									<td>14:39:57 PM</td>
 									<td class='linked' test-id='3'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -971,7 +1383,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:48:26 PM</td>
+									<td>14:41:23 PM</td>
 									<td class='linked' test-id='16'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -985,7 +1397,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:48:56 PM</td>
+									<td>14:41:52 PM</td>
 									<td class='linked' test-id='29'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -999,7 +1411,7 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:09 PM</td>
+									<td>14:42:07 PM</td>
 									<td class='linked' test-id='42'>
 										user trays to add one or more than one item to the shopping cart
 										<div class="">
@@ -1013,8 +1425,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:24 PM</td>
-									<td class='linked' test-id='56'>
+									<td>14:42:58 PM</td>
+									<td class='linked' test-id='85'>
 										User try to login with valid email and password
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with valid email and password</span>
@@ -1027,8 +1439,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:24 PM</td>
-									<td class='linked' test-id='57'>
+									<td>14:42:58 PM</td>
+									<td class='linked' test-id='86'>
 										User try to login with valid email and password
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with valid email and password</span>
@@ -1075,8 +1487,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:24 PM</td>
-									<td class='linked' test-id='55'>
+									<td>14:42:58 PM</td>
+									<td class='linked' test-id='84'>
 										User Login
 									</td>
 								</tr>
@@ -1086,8 +1498,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:24 PM</td>
-									<td class='linked' test-id='57'>
+									<td>14:42:58 PM</td>
+									<td class='linked' test-id='86'>
 										User try to login with valid email and password
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with valid email and password</span>
@@ -1100,8 +1512,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:33 PM</td>
-									<td class='linked' test-id='65'>
+									<td>14:43:06 PM</td>
+									<td class='linked' test-id='94'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1114,8 +1526,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:41 PM</td>
-									<td class='linked' test-id='72'>
+									<td>14:43:13 PM</td>
+									<td class='linked' test-id='101'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1128,8 +1540,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:50 PM</td>
-									<td class='linked' test-id='79'>
+									<td>14:43:20 PM</td>
+									<td class='linked' test-id='108'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1142,8 +1554,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:59 PM</td>
-									<td class='linked' test-id='86'>
+									<td>14:43:28 PM</td>
+									<td class='linked' test-id='115'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1190,8 +1602,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:33 PM</td>
-									<td class='linked' test-id='64'>
+									<td>14:43:06 PM</td>
+									<td class='linked' test-id='93'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1204,8 +1616,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:33 PM</td>
-									<td class='linked' test-id='65'>
+									<td>14:43:06 PM</td>
+									<td class='linked' test-id='94'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1218,8 +1630,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:41 PM</td>
-									<td class='linked' test-id='72'>
+									<td>14:43:13 PM</td>
+									<td class='linked' test-id='101'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1232,8 +1644,8 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:50 PM</td>
-									<td class='linked' test-id='79'>
+									<td>14:43:20 PM</td>
+									<td class='linked' test-id='108'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
@@ -1246,11 +1658,183 @@
 											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>17:49:59 PM</td>
-									<td class='linked' test-id='86'>
+									<td>14:43:28 PM</td>
+									<td class='linked' test-id='115'>
 										User try to login with invalid credentials
 										<div class="">
 											<span class="badge badge-default">User Login.User try to login with invalid credentials</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">@logout</p>
+							<p class="duration text-sm">2 tests</p>
+							<span class="datetime">
+							<span class='badge badge-success'>1</span>
+							
+							
+							
+							</span>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>@logout</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
+							
+							
+							
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>14:43:36 PM</td>
+									<td class='linked' test-id='122'>
+										User wants to logout from the system
+									</td>
+								</tr>
+								<tr class="tag-test-status" status="pass">
+									<td>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
+										</div>
+									</td>
+									<td>14:43:36 PM</td>
+									<td class='linked' test-id='123'>
+										user wants to logout when he authenticated
+										<div class="">
+											<span class="badge badge-default">User wants to logout from the system.user wants to logout when he authenticated</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="test-content scrollable">
+		<div class="test-content-tools">
+			<ul>
+				<li>
+					<a class="back-to-test" href="javascript:void(0)">
+					<i class="fa fa-arrow-left"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-content-detail">
+			<div class="detail-body"></div>
+		</div>
+	</div>
+</div><div class="test-wrapper row exception-view attributes-view">
+	<div class="test-list">
+		<div class="test-list-tools">
+			<ul class="tools pull-left">
+				<li>
+					<a href="">
+					<span class="font-size-14">Exception</span>
+					</a>
+				</li>
+			</ul>
+			<ul class="tools text-right">
+				<li>
+					<a href="#">
+					<span class="badge badge-primary">2</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="test-list-wrapper scrollable">
+			<ul class="test-list-item">
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">org.openqa.selenium.WebDriverException</p>
+							<p class="duration text-sm">1 tests</p>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>org.openqa.selenium.WebDriverException</h4>
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>14:39:57 PM</td>
+									<td class='linked' test-id='4'>
+										stepDefinitions.hooks.Hooks.getStart(io.cucumber.java.Scenario)
+										<div class="">
+											<span class="badge badge-default">user trays to add one or more than one item to the shopping cart</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li class="test-item">
+					<div class="open-test">
+						<div class="test-detail">
+							<p class="name">java.lang.NullPointerException</p>
+							<p class="duration text-sm">1 tests</p>
+						</div>
+					</div>
+					<div class="test-contents d-none">
+						<div class="info">
+							<h4>java.lang.NullPointerException</h4>
+						</div>
+						<table class='table table-sm mt-4'>
+							<thead>
+								<tr>
+									<th class="status-col">Status</th>
+									<th class="timestamp-col">Timestamp</th>
+									<th>TestName</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class='status-avatar fail-bg'>
+											<i class="fa fa-times text-white"></i>
+										</div>
+									</td>
+									<td>14:40:21 PM</td>
+									<td class='linked' test-id='15'>
+										stepDefinitions.hooks.Hooks.tearDown(io.cucumber.java.Scenario)
+										<div class="">
+											<span class="badge badge-default">user trays to add one or more than one item to the shopping cart</span>
 										</div>
 									</td>
 								</tr>
@@ -1289,12 +1873,12 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'>
+					<div><small data-tooltip='66.667%'>
 						<b>2</b> features passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> features failed, 
+						<small data-tooltip='33.333%'><b>1</b> features failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -1312,9 +1896,9 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'><b>9</b> scenarios passed</small></div>
+					<div><small data-tooltip='92.857%'><b>13</b> scenarios passed</small></div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> scenarios failed, 
+						<small data-tooltip='7.143%'><b>1</b> scenarios failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -1332,10 +1916,10 @@
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='100%'><b>60</b> steps passed</small></div>
+					<div><small data-tooltip='85.542%'><b>71</b> steps passed</small></div>
 					<div>
-						<small data-tooltip='0%'><b>0</b> steps failed, 
-						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+						<small data-tooltip='2.41%'><b>2</b> steps failed, 
+						<b>10</b> skipped, <b data-tooltip='12.048%'>0</b> others
 						</small>
 					</div>
 				</div>
@@ -1349,10 +1933,10 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Features</h6>
-							<h2 class="font-size-28 font-weight-light mt-3">2</h2>
+							<h2 class="font-size-28 font-weight-light mt-3">3</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>100.00%</span>
+							<span>66.67%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -1368,10 +1952,10 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Scenarios</h6>
-							<h2 class="font-size-28 font-weight-light mt-3">9</h2>
+							<h2 class="font-size-28 font-weight-light mt-3">14</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>100.00%</span>
+							<span>92.86%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -1387,7 +1971,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Mar 10, 2022 05:45:46 PM</h4>
+							<h4 class="font-weight-light mt-4">Mar 11, 2022 02:39:55 PM</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -1403,7 +1987,7 @@
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 4m 14s+317ms</h4>
+							<h4 class="font-weight-light mt-4">0h 3m 43s+683ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -1448,20 +2032,20 @@
 						<tbody>
 							<tr>
 								<td>@checkoutCart</td>
-								<td>4</td>
-								<td>0</td>
+								<td>7</td>
+								<td>1</td>
 								<td>0</td>
 								<td>
-									80%
+									77.778%
 								</td>
 							</tr>
 							<tr>
 								<td>@HappyScenario</td>
-								<td>7</td>
-								<td>0</td>
+								<td>5</td>
+								<td>2</td>
 								<td>0</td>
 								<td>
-									100%
+									71.429%
 								</td>
 							</tr>
 							<tr>
@@ -1482,6 +2066,15 @@
 									100%
 								</td>
 							</tr>
+							<tr>
+								<td>@logout</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>
+									50%
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -1491,41 +2084,41 @@
 </div>
 <script>
 	var statusGroup = {
-	    parentCount: 2,
+	    parentCount: 3,
 		passParent: 2,
-		failParent: 0,
+		failParent: 1,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 0,
-		childCount: 9,
-		passChild: 9,
-		failChild: 0,
+		exceptionsParent: 1,
+		childCount: 14,
+		passChild: 13,
+		failChild: 1,
 		fatalChild: 0,
 		errorChild: 0,
 		warningChild: 0,
 		skipChild: 0,
 		infoChild: 0,
 		debugChild: 0,
-		exceptionsChild: 0,
-		grandChildCount: 60,
-		passGrandChild: 60,
-		failGrandChild: 0,
+		exceptionsChild: 1,
+		grandChildCount: 83,
+		passGrandChild: 71,
+		failGrandChild: 2,
 		fatalGrandChild: 0,
 		errorGrandChild: 0,
 		warningGrandChild: 0,
-		skipGrandChild: 0,
+		skipGrandChild: 10,
 		infoGrandChild: 0,
 		debugGrandChild: 0,
-		exceptionsGrandChild: 0,
-		eventsCount: 60,
-		passEvents: 60,
-		failEvents: 0,
+		exceptionsGrandChild: 12,
+		eventsCount: 83,
+		passEvents: 71,
+		failEvents: 2,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
-		skipEvents: 0,
+		skipEvents: 10,
 		infoEvents: 0,
 		debugEvents: 0,
 		exceptionsEvents: 0
@@ -1533,7 +2126,7 @@
 </script>
 <script>
 	var timeline = {
-	        "User wants to add some shopping items to cart":106.003,"User Login":35.301
+	        "User wants to add some shopping items to cart":172.301,"User Login":30.365,"User wants to logout from the system":2.353
 	};
 </script>
                 </div>

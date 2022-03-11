@@ -51,6 +51,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -95,11 +103,11 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -116,6 +124,7 @@
 						    	        <a class="dropdown-item" href="#"><span class="cf">@HappyScenario</span></a>
 						    	        <a class="dropdown-item" href="#"><span class="cf">@login</span></a>
 						    	        <a class="dropdown-item" href="#"><span class="cf">@NegativeScenarios</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@logout</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -132,12 +141,12 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
 												tags="@checkoutCart"
 												devices="">
-												<span class="tt">03.10.2022 17:47:26</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:39:57</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[User wants to add some shopping items to cart] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @checkoutCart</span>
@@ -148,11 +157,11 @@
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
+											<div class="st fail test l1" 
 												tags="@HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:47:26</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:39:57</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">|---[user trays to add one or more than one item to the shopping cart] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @HappyScenario</span>
@@ -163,11 +172,11 @@
 												</span>
 												
 											</div>
-											<div class="st pass test l2" 
+											<div class="st fail test l2" 
 												tags="@checkoutCart @HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:47:26</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:39:57</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[user trays to add one or more than one item to the shopping cart] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @checkoutCart</span>
@@ -179,160 +188,266 @@
 												</span>
 												
 											</div>
-											<div class="st pass test l3" 
+											<div class="st fail test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:26</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:39:57</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[stepDefinitions.hooks.Hooks.getStart(io.cucumber.java.Scenario)] started</span>
+												
+												<div class="st fail">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[stepDefinitions.hooks.Hooks.getStart(io.cucumber.java.Scenario)]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'DESKTOP-05QK214', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: driver.version: ChromeDriver
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:203)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20047/status] to be available after 20004 ms
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:100)
+	at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:198)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:189)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:131)
+	at base.Base.startBrowser(Base.java:17)
+	at stepDefinitions.hooks.Hooks.getStart(Hooks.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:61)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:31)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:20)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:47)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:67)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.google.common.util.concurrent.SimpleTimeLimiter.callWithTimeout(SimpleTimeLimiter.java:156)
+	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:75)
+	... 51 more
+</textarea></span>
+												</div>
+											</div>
+											<div class="st skip test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:40</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:40</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "0" to the shopping cart] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "0" to the shopping cart]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:42</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:44</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:44</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $0.00"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $0.00"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"] started</span>
 												
-												<div class="st pass">
-													<span class="tt">03.10.2022 17:47:45</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
+												<div class="st skip">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
+												</div>
+											</div>
+											<div class="st fail test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[stepDefinitions.hooks.Hooks.tearDown(io.cucumber.java.Scenario)] started</span>
+												
+												<div class="st fail">
+													<span class="tt">03.11.2022 14:40:21</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[stepDefinitions.hooks.Hooks.tearDown(io.cucumber.java.Scenario)]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException
+	at utilities.MethodHelper.captureScreenshot(MethodHelper.java:26)
+	at stepDefinitions.hooks.Hooks.tearDown(Hooks.java:27)
+</textarea></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
 												tags="@checkoutCart @HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:48:26</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:23</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[user trays to add one or more than one item to the shopping cart] started</span>
 												<span class="category-list">
@@ -348,12 +463,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:26</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:23</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:36</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:32</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
 													
@@ -363,12 +478,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:36</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:32</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:37</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
 													
@@ -378,12 +493,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:37</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "1" to the shopping cart] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:37</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:33</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "1" to the shopping cart]</span>
 													
@@ -393,12 +508,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:37</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:33</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:38</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:34</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout]</span>
 													
@@ -408,12 +523,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:38</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:34</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:38</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:34</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button]</span>
 													
@@ -423,12 +538,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:38</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:34</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:39</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:34</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"]</span>
 													
@@ -438,12 +553,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:39</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:34</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:40</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button]</span>
 													
@@ -453,12 +568,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:40</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $32.39"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:40</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $32.39"]</span>
 													
@@ -468,12 +583,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:40</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:41</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button]</span>
 													
@@ -483,12 +598,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:41</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:41</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]</span>
 													
@@ -498,7 +613,7 @@
 											<div class="st pass test l2" 
 												tags="@checkoutCart @HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:48:56</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[user trays to add one or more than one item to the shopping cart] started</span>
 												<span class="category-list">
@@ -514,12 +629,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:56</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
 													
@@ -529,12 +644,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:52</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
 													
@@ -544,12 +659,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:52</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "2" to the shopping cart] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "2" to the shopping cart]</span>
 													
@@ -559,12 +674,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout]</span>
 													
@@ -574,12 +689,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:53</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button]</span>
 													
@@ -589,12 +704,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:57</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:53</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:58</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"]</span>
 													
@@ -604,12 +719,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:58</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:58</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button]</span>
 													
@@ -619,12 +734,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:58</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $43.18"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:58</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $43.18"]</span>
 													
@@ -634,12 +749,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:58</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:59</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button]</span>
 													
@@ -649,12 +764,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:48:59</span>&nbsp;
+												<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:48:59</span>&nbsp;
+													<span class="tt">03.11.2022 14:41:54</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]</span>
 													
@@ -664,7 +779,7 @@
 											<div class="st pass test l2" 
 												tags="@checkoutCart @HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:49:09</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[user trays to add one or more than one item to the shopping cart] started</span>
 												<span class="category-list">
@@ -680,12 +795,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:09</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:10</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
 													
@@ -695,12 +810,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:10</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:10</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
 													
@@ -710,12 +825,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:10</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "3" to the shopping cart] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:11</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:08</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user add one or more than one "3" to the shopping cart]</span>
 													
@@ -725,12 +840,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:11</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:08</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:11</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user clicks on the shopping cart to checkout]</span>
 													
@@ -740,12 +855,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:11</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:09</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:11</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the checkout button]</span>
 													
@@ -755,12 +870,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:11</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:09</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:09</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And fill payment information first name "Test" last name "Fake" and postal code "123456"]</span>
 													
@@ -770,12 +885,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:09</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And Click on continue button]</span>
 													
@@ -785,12 +900,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $60.45"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And the total price is "Total: $60.45"]</span>
 													
@@ -800,12 +915,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the finish button]</span>
 													
@@ -815,14 +930,322 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:12</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:10</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the order has been created with thanks word "Your order has been dispatched, and will arrive just as fast as the pony can get there!"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l1" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[User wants to sort the items from A to Z or Z to A] started</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags="@checkoutCart"
+												devices="">
+												<span class="tt">03.11.2022 14:42:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User wants to sort the items from A to Z or Z to A] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @checkoutCart</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:22</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:23</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:23</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "AZ"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:23</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "AZ"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:23</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Sauce Labs Backpack" have been sorted based the selection] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:23</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Sauce Labs Backpack" have been sorted based the selection]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags="@checkoutCart"
+												devices="">
+												<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User wants to sort the items from A to Z or Z to A] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @checkoutCart</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "ZA"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "ZA"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:31</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Test.allTheThings() T-Shirt (Red)" have been sorted based the selection] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:32</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Test.allTheThings() T-Shirt (Red)" have been sorted based the selection]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags="@checkoutCart"
+												devices="">
+												<span class="tt">03.11.2022 14:42:39</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User wants to sort the items from A to Z or Z to A] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @checkoutCart</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:39</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:39</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:39</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:40</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:40</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "low To High"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:40</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "low To High"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:40</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Sauce Labs Onesie" have been sorted based the selection] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:40</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Sauce Labs Onesie" have been sorted based the selection]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags="@checkoutCart"
+												devices="">
+												<span class="tt">03.11.2022 14:42:48</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User wants to sort the items from A to Z or Z to A] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @checkoutCart</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:48</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "High To low"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When select  one of the sorting type "High To low"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l3" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Sauce Labs Fleece Jacket" have been sorted based the selection] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:42:49</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the "Sauce Labs Fleece Jacket" have been sorted based the selection]</span>
 													
 													<span class="td"></span>
 												</div>
@@ -832,7 +1255,7 @@
 											<div class="st pass test l0" 
 												tags="@login"
 												devices="">
-												<span class="tt">03.10.2022 17:49:24</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">[User Login] started</span>
 												<span class="category-list">
@@ -847,7 +1270,7 @@
 											<div class="st pass test l1" 
 												tags="@HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:49:24</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[User try to login with valid email and password] started</span>
 												<span class="category-list">
@@ -862,7 +1285,7 @@
 											<div class="st pass test l2" 
 												tags="@login @HappyScenario"
 												devices="">
-												<span class="tt">03.10.2022 17:49:24</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User try to login with valid email and password] started</span>
 												<span class="category-list">
@@ -878,12 +1301,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:24</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:24</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:58</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page]</span>
 													
@@ -893,12 +1316,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:24</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:58</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "standard_user" "secret_sauce"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:25</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "standard_user" "secret_sauce"]</span>
 													
@@ -908,12 +1331,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:25</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:25</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button]</span>
 													
@@ -923,12 +1346,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:25</span>&nbsp;
+												<span class="tt">03.11.2022 14:42:59</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user in the home page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:25</span>&nbsp;
+													<span class="tt">03.11.2022 14:42:59</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user in the home page]</span>
 													
@@ -938,7 +1361,7 @@
 											<div class="st pass test l1" 
 												tags="@NegativeScenarios"
 												devices="">
-												<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[User try to login with invalid credentials] started</span>
 												<span class="category-list">
@@ -953,7 +1376,7 @@
 											<div class="st pass test l2" 
 												tags="@login @NegativeScenarios"
 												devices="">
-												<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User try to login with invalid credentials] started</span>
 												<span class="category-list">
@@ -969,12 +1392,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:06</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page]</span>
 													
@@ -984,12 +1407,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "standard_user" "Aa123456"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "standard_user" "Aa123456"]</span>
 													
@@ -999,12 +1422,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button]</span>
 													
@@ -1014,12 +1437,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:07</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:33</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:07</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"]</span>
 													
@@ -1029,7 +1452,7 @@
 											<div class="st pass test l2" 
 												tags="@login @NegativeScenarios"
 												devices="">
-												<span class="tt">03.10.2022 17:49:41</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User try to login with invalid credentials] started</span>
 												<span class="category-list">
@@ -1045,12 +1468,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:41</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:41</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page]</span>
 													
@@ -1060,12 +1483,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:41</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "mmm@mmm.com" "secret_sauce"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:41</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "mmm@mmm.com" "secret_sauce"]</span>
 													
@@ -1075,12 +1498,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:41</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:42</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button]</span>
 													
@@ -1090,12 +1513,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:42</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:42</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:13</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Username and password do not match any user in this service"]</span>
 													
@@ -1105,7 +1528,7 @@
 											<div class="st pass test l2" 
 												tags="@login @NegativeScenarios"
 												devices="">
-												<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User try to login with invalid credentials] started</span>
 												<span class="category-list">
@@ -1121,12 +1544,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page]</span>
 													
@@ -1136,12 +1559,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "standard_user" ""] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "standard_user" ""]</span>
 													
@@ -1151,12 +1574,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button]</span>
 													
@@ -1166,12 +1589,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Password is required"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:50</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:20</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Password is required"]</span>
 													
@@ -1181,7 +1604,7 @@
 											<div class="st pass test l2" 
 												tags="@login @NegativeScenarios"
 												devices="">
-												<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:28</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[User try to login with invalid credentials] started</span>
 												<span class="category-list">
@@ -1197,12 +1620,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:28</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:28</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given A user in the login page]</span>
 													
@@ -1212,12 +1635,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:28</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "" "secret_sauce"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user enter name and password in fields "" "secret_sauce"]</span>
 													
@@ -1227,12 +1650,12 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on the login button]</span>
 													
@@ -1242,14 +1665,121 @@
 											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+												<span class="tt">03.11.2022 14:43:29</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Username is required"] started</span>
 												
 												<div class="st pass">
-													<span class="tt">03.10.2022 17:49:59</span>&nbsp;
+													<span class="tt">03.11.2022 14:43:29</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then system displays an error message says "Epic sadface: Username is required"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											</div>
+											<div class="tsc" status="pass">
+											<div class="st pass test l0" 
+												tags="@logout"
+												devices="">
+												<span class="tt">03.11.2022 14:43:36</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">[User wants to logout from the system] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @logout</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l1" 
+												tags="@logout"
+												devices="">
+												<span class="tt">03.11.2022 14:43:36</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">|---[user wants to logout when he authenticated] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @logout</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
+												
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:43:36</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:43:36</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has been logged in with valid user name "standard_user" and password "secret_sauce"]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:43:36</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:43:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And user in the home page]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:43:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user click on menu button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:43:37</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user click on menu button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:43:37</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on logout button] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:43:38</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And click on logout button]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">03.11.2022 14:43:38</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user has been logged out and in login page again] started</span>
+												
+												<div class="st pass">
+													<span class="tt">03.11.2022 14:43:38</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user has been logged out and in login page again]</span>
 													
 													<span class="td"></span>
 												</div>

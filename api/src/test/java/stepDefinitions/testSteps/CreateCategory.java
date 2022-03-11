@@ -16,12 +16,8 @@ public class CreateCategory implements En {
         this.base = base;
         Given("^user has the name and id of a new Category$", (DataTable dataTable) -> {
             base.requestBody = apiMethodHelper.covertDTtoJO(dataTable);
-            System.out.println(base.requestBody);
-
         });
         When("^User Send a post request to create the Category$", () -> {
-            System.out.println(base.id);
-            System.out.println(base.requestBody);
             base.response = apiRequests.createCategory(base.requestBody);
         });
         Then("^Category has been (.* ?) with \"([^\"]*)\" and \"([^\"]*)\" that we've provided$", (String dummyFlag, String name, String id) -> {

@@ -1,0 +1,8 @@
+stepDefinitions\hooks\Hooks.class
+stepDefinitions\testSteps\CreateCategory.class
+runners\Runner.class
+stepDefinitions\testSteps\UpdateCategory.class
+stepDefinitions\testSteps\DeleteCategory.class
+stepDefinitions\testSteps\GetAllCategories.class
+stepDefinitions\testSteps\GetACategory.class
+apiRequests\ApiRequests.class

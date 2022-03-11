@@ -19,7 +19,6 @@ public class UpdateCategory implements En {
             JSONObject body = apiMethodHelper.covertDTtoJO(datatable);
             System.out.println(body);
             base.response= apiRequests.createCategory(body);
-            System.out.println(base.response);
         });
         When("^User send a patch request to update a Category$", (DataTable datatable) -> {
             JSONObject body = apiMethodHelper.covertDTtoJO(datatable);
